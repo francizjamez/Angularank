@@ -1,0 +1,9 @@
+3 views
+- contributors list
+- details of a contributor
+- detaills of a repository
+
+contributors list
+- sortable by contributions amount to all repository
+- sortable by amount of followers
+- sortable by public repos/gist published

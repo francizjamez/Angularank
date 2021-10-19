@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Switch } from "react-router-dom";
+import Home from "./pages/Home";
+import Repo from "./pages/repo";
+import User from "./pages/user";
+import AngularIcon from "./reusable_components/AngularIcon";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="min-h-screen bg-background-500 text-white py-3">
+      <div className="flex items-center mx-auto w-min mb-5">
+        <AngularIcon />
+      </div>
+      <Switch>
+        <Route path="/user/:username" component={User} />
+        <Route path="/repo/:company/:name" component={Repo} />
+        <Route path="/" component={Home} />
+      </Switch>
     </div>
   );
 }
